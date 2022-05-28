@@ -21,6 +21,7 @@ class InputFeild extends StatefulWidget {
   final TextInputAction? textInputAction;
   final InputDecoration? decoration;
   final FieldsTitle? feildTitle;
+  final TextStyle? style;
   final Widget Function(
     ShakeController? shaker,
     bool isValid,
@@ -30,6 +31,7 @@ class InputFeild extends StatefulWidget {
     Key? key,
     required this.name,
     this.data,
+    this.style,
     this.line = false,
     this.enabled = true,
     this.hint,
@@ -62,6 +64,7 @@ class _InputFeildState extends State<InputFeild> {
       name: widget.name,
       initialValue: widget.data,
       validator: widget.validator,
+      style: widget.style,
       decoration: [
         widget.decoration ?? const InputDecoration(),
         const InputDecoration(

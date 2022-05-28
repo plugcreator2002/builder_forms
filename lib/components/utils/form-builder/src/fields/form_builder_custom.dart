@@ -33,9 +33,7 @@ class FormBuilderCustom<T> extends FormBuilderField<T> {
           onReset: onReset,
           decoration: decoration,
           focusNode: focusNode,
-          builder: (fieldState) => childFeild(
-            fieldState as StateBuilder<T>,
-          ),
+          builder: (fieldState) => childFeild(fieldState as StateBuilder<T>),
         );
 
   @override
