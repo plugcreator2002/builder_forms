@@ -139,7 +139,7 @@ class FormValidators {
       if (isTrue(candidate?.trim().isEmail)) {
         return null;
       }
-      return return error ?? FormLocalizations.of(context).emailErrorText;
+      return error ?? FormLocalizations.of(context).emailErrorText;
     };
   }
 
