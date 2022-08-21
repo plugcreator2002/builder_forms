@@ -136,10 +136,10 @@ class FormValidators {
     String? error,
   }) {
     return (candidate) {
-      if (isTrue(candidate?.isNotEmpty) && isTrue(candidate?.trim().isEmail)) {
-        return error ?? FormLocalizations.of(context).emailErrorText;
+      if (isTrue(candidate?.trim().isEmail)) {
+        return null;
       }
-      return null;
+      return return error ?? FormLocalizations.of(context).emailErrorText;
     };
   }
 
